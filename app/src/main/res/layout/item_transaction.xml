@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/viewMargin"
+        app:layout_constraintTop_toBottomOf="@id/layoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerAll"
+        android:background="?attr/background_color_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginHorizontal="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="6dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:alpha="0.5"
+                android:text="26 Jun 2024"
+                android:textColor="?attr/text_color_1"
+                android:fontFamily="@font/inter_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:text="Expense: -500,000"
+                android:textAlignment="textEnd"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:ellipsize="marquee"
+                android:alpha="0.5"
+                android:textColor="?attr/text_color_1"
+                android:fontFamily="@font/inter_medium"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toEndOf="@id/tvDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/background_color_1"
+            android:paddingVertical="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutTop">
+
+            <ImageView
+                android:id="@+id/imgCategory"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:padding="6dp"
+                android:layout_width="30dp"
+                android:contentDescription="@null"
+                android:background="@drawable/bg_transaction_category_in_home"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/tvMoney"
+                android:text="-500,000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="8dp"
+                android:textColor="?attr/text_color_1"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_semibold"
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvTransactionName"
+                android:layout_width="0dp"
+                android:text="Clothing"
+                android:fontFamily="@font/inter_medium"
+                android:includeFontPadding="false"
+                android:textSize="13sp"
+                android:textColor="?attr/text_color_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgCategory"
+                app:layout_constraintEnd_toStartOf="@id/tvMoney"
+                android:layout_marginHorizontal="8dp"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

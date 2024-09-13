@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AutoSizeDemo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.AutoSizeDemo.Light" parent="Base.Theme.AutoSizeDemo">
+        <item name="android:statusBarColor">@color/main_blue</item>
+        <item name="background_color_1">#FFFFFF</item>
+        <item name="background_color_2">#DDDDDD</item>
+        <item name="background_color_3">#EEEEEE</item>
+        <item name="text_color_1">#000000</item>
+        <item name="text_color_2">#575757</item>
+        <item name="icon_color_1">#7C7C7C</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.AutoSizeDemo.Dark" parent="Base.Theme.AutoSizeDemo">
+        <item name="background_color_1">#1E1E1E</item>
+        <item name="background_color_2">#2B2A2A</item>
+        <item name="background_color_3">#322E2E</item>
+        <item name="text_color_1">#FFFFFF</item>
+        <item name="text_color_2">#939393</item>
+        <item name="icon_color_1">#D6D6D6</item>
+        <item name="android:navigationBarColor">#1E1E1E</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>
